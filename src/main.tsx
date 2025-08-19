@@ -10,7 +10,7 @@ import './user/variables.scss';
 
 const fetchManagementToken = async () => {
   try {
-    const response = await fetch('auth0/oauth/token', {
+    const response = await fetch(`https://${import.meta.env.VITE_AUTH0_DOMAIN}/oauth/token`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
